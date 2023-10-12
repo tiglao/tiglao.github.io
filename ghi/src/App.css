@@ -1,0 +1,580 @@
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chicle&display=swap");
+
+:root {
+  --serif: "Merriweather", "Times New Roman", Times, serif;
+  --sans-serif: "Roboto", Helvetica, Arial, sans-serif;
+  --monospace: "Roboto Mono", "Courier New", Courier, monospace;
+  --cursive: "Chicle", sans-serif;
+}
+
+.serif {
+  font-family: var(--serif);
+}
+
+.sans-serif {
+  font-family: var(--sans-serif);
+}
+
+.monospace {
+  font-family: var(--monospace);
+}
+
+.cursive {
+  font-family: var(--cursive);
+}
+
+/* global */
+
+.one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body {
+  background-color: #1b3649;
+  font-family: var(--sans-serif);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navbar-toggler-icon-white {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path stroke="rgba(255, 255, 255)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+}
+
+.custom-close-button .btn-close::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path stroke="rgba(255, 255, 255)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M2 2l12 12M2 14L14 2"/></svg>');
+}
+
+.bg-background {
+  color: #dcf3e6;
+}
+
+.main-buttons {
+  background-color: #0d99ff;
+}
+
+.image-placeholders {
+  background-color: #ffc7c2;
+  height: 120px;
+  width: 120px;
+}
+
+.dark-orange-attention {
+  background-color: #ec6b4e;
+}
+
+.custom-toggler:focus {
+  outline: none !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.bg-disco {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1630395822970-acd6a691d97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.bg-disco::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  z-index: -1;
+}
+
+.slide-nav {
+  background-color: #bde3ff;
+}
+
+.circle-button {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white; /* Text color */
+  border-radius: 50%; /* Makes it a circle */
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; /* Removes the default border */
+}
+
+.white-color {
+  color: white;
+}
+
+.white-fill {
+  fill: white;
+}
+
+/* dashboard */
+
+div.dashboard-main {
+  padding-left: 50px !important;
+  font-family: var(--sans-serif);
+}
+
+.extra-bottom-space {
+  padding-bottom: 400px;
+}
+
+/* dashboard - header */
+
+.curved-border {
+  border-radius: 25px;
+}
+
+.curved-header {
+  margin: 0 auto 0 auto;
+  width: 100%;
+  background: #6c1cac;
+  border-bottom-right-radius: 100% 60%;
+  border-bottom-left-radius: 100% 60%;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+}
+
+.curved-header form {
+  margin-top: 20px;
+}
+
+.header-logo {
+  height: 120px;
+}
+
+.header-app-text {
+  font-family: var(--cursive);
+  font-size: 70px;
+  vertical-align: middle;
+}
+
+.header-search {
+  font-family: var(--monospace);
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.search-button {
+  background-color: #bde3ff;
+}
+
+/* dashboard - footer */
+
+.footer-container {
+  position: sticky;
+  bottom: 0;
+  z-index: 1000; /* make sure it stays above the rest of the content */
+}
+
+.footer-container,
+svg {
+  margin: -1;
+}
+
+.footer-container a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--sans-serif);
+}
+
+.svg-button-wrapper {
+  position: relative;
+}
+
+.footer-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* dashboard - central container */
+.center {
+  background-color: #1b3649;
+  color: #ffffff;
+}
+
+/* sidenav */
+
+.main-nav {
+  background-color: #0bc4fc;
+  font-family: var(--monospace);
+  position: relative;
+  top: -160px;
+  z-index: 1;
+  height: calc(100vh * 2 / 3);
+  min-height: calc(100vh * 2 / 3);
+}
+
+.sidenav-container {
+  min-height: calc(100vh * 2 / 3);
+}
+
+.side-nav-container {
+  position: sticky;
+  top: 0;
+  height: calc(100vh * 2 / 3);
+  min-height: calc(100vh * 2 / 3);
+  overflow-y: auto;
+}
+
+.nav-item {
+  margin-bottom: 30px !important;
+  font-size: 24px !important;
+}
+
+.nav-item .text-decoration-none.d-block {
+  color: #ffffff;
+  text-transform: lowercase;
+  text-align: right;
+}
+
+.circle {
+  position: absolute;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  z-index: 50;
+  transition: top 0.3s ease-in-out;
+}
+
+.logout {
+  margin-top: 60px !important;
+}
+
+.logout-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #808080;
+}
+
+/* feedback */
+
+.feedback-button {
+  position: absolute;
+  bottom: calc(100% + 50px); /* 50px above the top of the .svg-button-wrapper */
+  right: 40px; /* 20px from the right edge */
+  z-index: 1000;
+  background-color: #0bc4fc;
+  color: #ffffff;
+  border-radius: 50%; /* make it circular */
+  width: 70px; /* fixed width */
+  height: 70px; /* fixed height */
+  text-align: center;
+  line-height: 50px; /* align the icon in the center */
+}
+
+.modal.fade .modal-dialog {
+  transition-duration: 0.5s !important;
+}
+
+/* user dashboard */
+
+.section-title {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+/* user dashboard - coming up section */
+
+.coming-up-card {
+  background-color: #fc2cbc;
+  color: #f0f0f0;
+  font-family: var(--sans-serif);
+  width: 140px;
+  height: 140px;
+  padding-bottom: 10px;
+  position: relative;
+  border: none;
+}
+
+.coming-up-col {
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.coming-up-card .card-body {
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(transparent, rgba(252, 44, 188, 0.9));
+  z-index: 2;
+}
+
+.coming-up-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+  z-index: 3;
+  position: relative;
+}
+
+.coming-up-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border: none;
+}
+
+.description-under-card {
+  padding-left: 8px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.coming-up-arrow {
+  position: absolute;
+  top: -93px;
+  right: 10px;
+  z-index: 2;
+  color: #0bc4fc;
+  font-size: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+.coming-up-arrow:active {
+  transform: rotate(45deg) translateY(4px);
+}
+
+.no-outline {
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: grey;
+  outline: none;
+  text-decoration: none;
+}
+
+.no-outline:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* userdashboard - waiting */
+
+.waiting-section {
+  padding-left: 6em;
+}
+
+.waiting-date-time {
+  font-size: 0.7em;
+}
+
+.waiting-cards {
+  background-color: #0bc4fc;
+  color: #ffffff;
+  font-family: var(--monospace);
+  width: 350px;
+  height: 70px;
+}
+
+.waiting-card {
+  padding: 0;
+  padding-top: 10px !important;
+}
+
+.waiting-arrow {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  z-index: 4;
+  color: #ffc7c2;
+  font-size: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+.waiting-arrow:active {
+  transform: rotate(45deg) translateY(4px);
+}
+
+/* partyplandetail */
+
+.party-plan-detail {
+  color: #ffffff;
+}
+
+.account-avatar {
+  width: 140px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+
+.account-avatar-crop {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.party-image-crop {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.party-image {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10%;
+}
+
+.party-plan-detail {
+  padding-left: 50px !important;
+  font-family: var(--sans-serif);
+}
+
+.start-date {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.end-date {
+  font-size: 2rem;
+}
+
+.keywords {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.3rem;
+}
+
+.planner-name {
+  float: right;
+}
+
+/* partyplandetail - invite card */
+
+.invited-card {
+  background-color: #fc2cbc;
+  color: #f0f0f0;
+  font-family: var(--sans-serif);
+  width: 100px;
+  height: 80px;
+  padding-bottom: 10px;
+  position: relative;
+  border: none;
+}
+
+.invited-col {
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.invited-card .card-body {
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(transparent, rgba(252, 44, 188, 0.9));
+  z-index: 2;
+}
+
+.invited-text {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: bold;
+  color: #ffffff;
+  z-index: 3;
+  position: relative;
+}
+
+.invited-image {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border: none;
+}
+
+.description-under-card {
+  padding-left: 8px;
+  margin-top: 4px;
+  font-size: 0.7rem;
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+  height: 80px;
+}
+
+.card-body a:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.invited-subtitle {
+  font-size: 2rem;
+}
+
+.invite-card-content {
+  overflow: hidden;
+  height: calc(170px - 60px);
+}
+
+.invite-card-text {
+  font-size: 0.7rem;
+}
+
+.invite-card-link {
+  color: #ffffff !important;
+  font-style: bold;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}

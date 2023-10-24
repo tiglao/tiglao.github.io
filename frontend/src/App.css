@@ -1,0 +1,20 @@
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    /* Add Google Fonts placeholder for default font-family */
+    /* font-family: 'Your-Default-Google-Font', sans-serif; */
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+code, pre {
+    /* font-family: 'Your-Monospace-Google-Font', monospace; */
+  }

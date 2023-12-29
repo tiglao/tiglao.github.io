@@ -171,6 +171,8 @@ cython_debug/
 
 # production
 **/build
+README.md.prod
+LICENSE.prod
 
 # misc
 .DS_Store

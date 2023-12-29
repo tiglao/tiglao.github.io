@@ -1,15 +1,11 @@
 from fastapi import FastAPI
-from routers.user import user
+from routers import owner
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
 app = FastAPI()
 
-from fastapi import FastAPI
-
-
-app.include_router(user, tags=["Users"], prefix="/user")
-
+app.include_router(owner.router, tags=["Owners"], prefix="/owner")
 
 app.add_middleware(
     CORSMiddleware,

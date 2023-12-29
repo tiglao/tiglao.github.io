@@ -1,15 +1,22 @@
-import React from "react";
+import * as React from 'react';
 import "./App.css";
-import Home from "./Home";
+import { ThemeProvider } from '@mui/material/styles';
+import MainContent from "./components/MainContent";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import theme from "./assets/styles/theme";
+import Wrapper from './components/Wrapper';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <Wrapper>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Routes>
+              <Route path="/" element={<MainContent />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
+    </Wrapper>
   );
 }
 

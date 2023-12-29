@@ -1,80 +1,80 @@
-# 👑 Instacart Premium 👑
+# Tiglao Portfolio
 
-🚀🚀 🚀🚀
+What's underneath my portfolio website.
 
-
-![Alt text](<frontend/images/Instacart Premium.gif>)
 ## Tech Stack
-### Farm
-- Fast API
-- React Vite
-- Mongodb  ?? Maybe Postgresql
-
-![Fast API](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![React Vite](https://img.shields.io/badge/React_Vite-61DAFB?style=for-the-badge&logo=react)
-![Mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb)
-
-
-
-### Backend
-- uvicorn
-- pydantic
-- pymongo
-- requests
-- python-donenv
-- mongo-express
-
-![Uvicorn](https://img.shields.io/badge/Uvicorn-009688?style=for-the-badge&logo=uvicorn)
-![Pydantic](https://img.shields.io/badge/Pydantic-14303D?style=for-the-badge)
-![Pymongo](https://img.shields.io/badge/Pymongo-4EA94B?style=for-the-badge)
-![Requests](https://img.shields.io/badge/Requests-FF7139?style=for-the-badge)
-![Python Dotenv](https://img.shields.io/badge/Python_Dotenv-3776AB?style=for-the-badge&logo=python)
-![Mongo Express](https://img.shields.io/badge/Mongo_Express-4EA94B?style=for-the-badge&logo=mongo-express)
-
 
 ### Frontend
-- react-router
-- donenv
-- react-router
-- rect-bootstrap
-- bootstrap
 
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router)
-![Dotenv](https://img.shields.io/badge/Dotenv-008080?style=for-the-badge)
-![React Bootstrap](https://img.shields.io/badge/React_Bootstrap-7952B3?style=for-the-badge&logo=bootstrap)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap)
+- React 18.2.0
+- React Bootstrap 2.8.0
+- Bootstrap 5.3.2
+- Vite 4.4.5
+- React Router DOM 6.16.0
 
+### Backend
 
+- FastAPI 0.103.1
+- Pydantic 2.3.0
+- Pymongo 4.5.0
+- Uvicorn 0.23.2
 
-## Getting Started 
-### App is currently containerized (will probably change when setting up in aws)
-clone to machine 
+### DevOps
 
-cd instacartpremium
+- Docker
+- Docker Compose
 
-remove .example from .env filename
+## Requirements
 
-add variables to .env 
+- Docker and Docker Compose installed
+- Node.js and npm/yarn installed
+- Python 3.x installed
 
-start docker
+## Getting Started
 
-docker compose up --build
+### Clone the repository
 
-The endpoints work, CRUD for sample user data. 
+```bash
+git clone https://github.com/yourusername/portfolio-template.git
+cd portfolio-template
+```
 
+### Environment Variables
 
-## Dev URL's
-Frontend React: localhost:3000
+Duplicate the `.env.example` file for each service (frontend and backend) and fill in the necessary environment variables.
 
-FastApi endpoints: localhost:8000/docs
+### Steps
 
-Mongo Express: localhost:8081
+1. **Clone the Repository**
 
+    ```bash
+    git clone https://github.com/yourusername/your-repo-name.git
+    ```
 
-🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🍈 🍒 🍑 🍍 🥭 🥥 🥝 🍅
-🥑 🍆 🥔 🥕 🌽 🌶️ 🥒 🥬 🥦 🍄 🧅 🧄 🍠 🥗 🍼 🥄 🍴 
-🍞 🥐 🥖 🥨 🧀 🍖 🍗 🥩 🥓 🍔 🍟 🍕 🌭 🥪 🌮 🌯 🍳
-🍲 🍛 🍜 🍝 🍠 🍢 🍣 🍤 🍥 🍡 🍧 🍨 🍩 🍪 🎂 🍰 🧁
-🍫 🍬 🍭 🍮 🍯 🍱 🍙 🍚 🍛 🍜 🍝 🍠 🍢 🍣 🍤 🍥 🍡
-🍧 🍨 🍩 🍪 🎂 🍰 🧁 🍫 🍬 🍭 🍮 🍯 🍻 🥂 🥃 🥤 🧊
-☕ 🍵 🍶 🍾 🍷 🍸 🍹 🍺  
+2. **Navigate to the project directory**
+
+    ```bash
+    cd your-repo-name
+    ```
+
+3. **Environment Variables**
+
+    - Copy `.env.example` to `.env` and fill in the necessary environment variables
+
+4. **Build and Run Containers**
+
+    ```bash
+    docker-compose up --build
+    ```
+
+    This will build and start the frontend, backend, and MongoDB services. Your frontend will be accessible at `http://localhost:3000` and your backend API will be at `http://localhost:8000`.
+
+5. **Mongo Express (Optional)**
+
+    If you'd like to use Mongo Express for database management, it will be available at `http://localhost:8081`.
+
+### To stop the services
+
+```bash
+docker-compose down
+```

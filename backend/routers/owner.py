@@ -1,35 +1,30 @@
 from fastapi import APIRouter
-
 from models.owner import Owner
-from config.db import db
-from utils.encoders import serializeDict, serializeList
-from bson import ObjectId
+from utils.crud_operations import find_all, find_one, create, update, soft_delete, hard_delete
 
-owner = APIRouter()
+router = APIRouter()
 
-
-@owner.get("/")
+@router.get("/")
 async def find_all_owners():
-    return serializeList(db.local.owner.find())
+    return find_all("owner")
 
-
-@owner.get("/{id}")
+@router.get("/{id}")
 async def find_one_owner(id):
-    return serializeDict(db.local.owner.find_one({"_id": ObjectId(id)}))
+    return find_one("owner", id)
 
-
-@owner.post("/")
+@router.post("/")
 async def create_owner(owner: Owner):
-    db.local.owner.insert_one(dict(owner))
-    return serializeList(db.local.owner.find())
+    print(f"Owner Data: {owner}")
+    return create("owner", owner)
 
-
-@owner.put("/{id}")
+@router.put("/{id}")
 async def update_owner(id, owner: Owner):
-    db.local.owner.find_one_and_update({"_id": ObjectId(id)}, {"$set": dict(owner)})
-    return serializeDict(db.local.owner.find_one({"_id": ObjectId(id)}))
+    return update("owner", id, owner)
 
+@router.delete("/soft/{id}")
+async def soft_delete_owner(id):
+    return soft_delete("owner", id)
 
-@owner.delete("/{id}")
-async def delete_owner(id, owner: Owner):
-    return serializeDict(db.local.owner.find_one_and_delete({"_id": ObjectId(id)}))
+@router.delete("/hard/{id}")
+async def hard_delete_owner(id):
+    return hard_delete("owner", id)

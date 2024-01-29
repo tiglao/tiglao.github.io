@@ -71,7 +71,7 @@ Duplicate the `.env.example` file for each service (frontend and backend) and fi
 
 5. **Mongo Express (Optional)**
 
-    If you'd like to use Mongo Express for database management, it will be available at `http://localhost:8081`.
+    If you'd like to use Mongo Express for database management, it will be available at `http://localhost:8082`.
 
 ### To stop the services
 

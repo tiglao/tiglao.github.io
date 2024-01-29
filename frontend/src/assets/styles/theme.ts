@@ -23,11 +23,11 @@ const theme = createTheme({
     fontFamily: 'Quicksand, Arial, sans-serif',
     h1: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '3rem', // Example size, adjust as needed
+      fontSize: '10rem', // Example size, adjust as needed
     },
     h2: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '2.5rem', // Example size
+      fontSize: '7rem', // Example size
     },
     h3: {
       fontFamily: 'Righteous, cursive',
@@ -47,14 +47,15 @@ const theme = createTheme({
     },
     subtitle1: {
       fontFamily: 'Merienda, cursive',
-      fontSize: '1rem',
+      fontSize: '6rem',
     },
     body1: {
       fontFamily: 'Quicksand, Arial, sans-serif',
-      fontSize: '1rem', // Example size
+      fontSize: '1.2rem', // Example size
     },
     button: {
-      textTransform: 'none',
+      textTransform: 'uppercase',
+      fontSize: '1.3em'
     },
   },
   components: {
@@ -64,7 +65,8 @@ const theme = createTheme({
           textTransForm: 'uppercase',
           backgroundColor: '#000000',
           color: '#FFFFFF',
-          borderRadius: '4px',
+          height: '50px',
+          borderRadius: '8px',
           '&:hover': {
             backgroundColor: 'rgba(0, 0, 0, 0.8)', // Lighten for hover
           },

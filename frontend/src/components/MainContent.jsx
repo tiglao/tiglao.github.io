@@ -7,14 +7,23 @@ import Sun from './Sun';
 const MainContent = () => {
 
   return (
-    <Box sx={{ display: 'flex', height: `98%`, flexDirection: 'column' }}>
+    <Box sx={{ display: 'flex', height: '100%', flexDirection: 'column', overflow: 'hidden' }}>
       <Header />
-      <Box sx={{ flexGrow: 1, flexShrink: 1, overflow: 'auto' }}>
-        <Sun />
-      </Box>
-      <Footer />
+      <Box sx={{ flexGrow: 1, flexShrink: 1 }}>
+  <Sun sx={{
+    position: 'absolute',
+    left: '70%',
+    top: '30%',
+    transform: 'translate(-50%, -50%)',
+    width: '250px',
+    height: '250px',
+  }} />
+</Box>
+      <Footer isCompact={false} />
     </Box>
   );
 };
 
 export default MainContent;
+
+

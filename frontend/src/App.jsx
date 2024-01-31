@@ -9,6 +9,8 @@
   import Wrapper from './components/Wrapper';
   import CreateNote from './components/CreateNote';
   import Notes from './components/Notes';
+  import Portfolio from './components/Portfolio';
+  import PortfolioItem from './components/PortfolioItem';
 
   function App() {
     return (
@@ -16,6 +18,8 @@
         <ThemeProvider theme={theme}>
           <Router>
             <Routes>
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/portfolioitem" element={<PortfolioItem />} />
             <Route path="/notes" element={<Notes />} />
             <Route path="/createnote" element={<CreateNote />} />
               <Route path="/contact" element={<Contact />} />

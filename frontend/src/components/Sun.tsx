@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import sunImage from '../assets/images/sun.PNG'; // Make sure the path is correct
+import sunImage from '../assets/images/sun.PNG';
 
 const Sun = ({ sx }) => {
   return (
@@ -10,10 +10,10 @@ const Sun = ({ sx }) => {
         <Box
           component="img"
           sx={{
-            maxWidth: '100%', // Set to 100% to fill the container
-            maxHeight: '100%', // Set to 100% to fill the container
-            objectFit: 'contain', // Use 'contain' to keep the aspect ratio
-            ...sx, // Spread additional styles passed as props
+            maxWidth: '100%', 
+            maxHeight: '100%',
+            objectFit: 'contain', 
+            ...sx, 
           }}
           alt="Sun"
           src={sunImage}

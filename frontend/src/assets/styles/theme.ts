@@ -23,35 +23,71 @@ const theme = createTheme({
     fontFamily: 'Quicksand, Arial, sans-serif',
     h1: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '10rem', // Example size, adjust as needed
+      fontSize: '10rem',
+      textShadow: `
+      -1px -1px 0 #FFFFFF,  
+       1px -1px 0 #FFFFFF,
+      -1px  1px 0 #FFFFFF,
+       1px  1px 0 #FFFFFF`,
     },
     h2: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '7rem', // Example size
+      fontSize: '7rem',
+      textShadow: `
+      -1px -1px 0 #FFFFFF,  
+       1px -1px 0 #FFFFFF,
+      -1px  1px 0 #FFFFFF,
+       1px  1px 0 #FFFFFF`,
     },
     h3: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '2rem', // Example size
+      fontSize: '2rem',
+      textShadow: `
+      -1px -1px 0 #FFFFFF,  
+       1px -1px 0 #FFFFFF,
+      -1px  1px 0 #FFFFFF,
+       1px  1px 0 #FFFFFF`,
     },
     h4: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '1.5rem', // Example size
+      fontSize: '1.5rem',
+      textShadow: `
+        -1px -1px 0 #FFFFFF,  
+         1px -1px 0 #FFFFFF,
+        -1px  1px 0 #FFFFFF,
+         1px  1px 0 #FFFFFF`,
     },
     h5: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '1.25rem', // Example size
+      fontSize: '1.25rem',
+      textShadow: `
+        -1px -1px 0 #FFFFFF,  
+         1px -1px 0 #FFFFFF,
+        -1px  1px 0 #FFFFFF,
+         1px  1px 0 #FFFFFF`,
     },
     h6: {
       fontFamily: 'Righteous, cursive',
-      fontSize: '1rem', // Example size
+      fontSize: '1rem',
+      textShadow: `
+        -1px -1px 0 #FFFFFF,  
+         1px -1px 0 #FFFFFF,
+        -1px  1px 0 #FFFFFF,
+         1px  1px 0 #FFFFFF`,
     },
     subtitle1: {
       fontFamily: 'Merienda, cursive',
+      letterSpacing: '0.1em', 
       fontSize: '6rem',
+      textShadow: `
+        -1px -1px 0 #FFFFFF,  
+         1px -1px 0 #FFFFFF,
+        -1px  1px 0 #FFFFFF,
+         1px  1px 0 #FFFFFF`,
     },
     body1: {
       fontFamily: 'Quicksand, Arial, sans-serif',
-      fontSize: '1.2rem', // Example size
+      fontSize: '1.2rem',
     },
     button: {
       textTransform: 'uppercase',

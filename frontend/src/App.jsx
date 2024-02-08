@@ -11,7 +11,9 @@
   import Notes from './components/Notes';
   import Portfolio from './components/Portfolio';
   import PortfolioItem from './components/PortfolioItem';
-
+  import "slick-carousel/slick/slick.css"; 
+  import "slick-carousel/slick/slick-theme.css";
+  
   function App() {
     return (
       <Wrapper>

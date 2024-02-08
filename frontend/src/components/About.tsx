@@ -4,6 +4,7 @@
   import Footer from './Footer';
   import AboutBio from './Bio';
   import Sun from './Sun';
+  import Ellie from './EllieOrange';
   
   const About = () => {
     return (
@@ -11,16 +12,17 @@
         height: '100%', 
         flexDirection: 'column',
       }}>
+        {/* Background portrait, sun, circle */}
         <Box sx={{
           position: 'absolute',
-          left: '17%',
-          top: '28%',
+          left: '12%',
+          top: '-25%',
           width: '12vw',
           height: '60vw',
-          backgroundColor: 'orange',
-          borderRadius: '10px',
           zIndex: -1
-        }} />
+        }}>
+          <Ellie sx = {{ width: '200%', height: '200%' }}/>
+        </Box>
         <Box sx={{
           position: 'absolute',
           left: '5%',

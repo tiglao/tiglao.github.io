@@ -22,18 +22,17 @@
           </Typography>
           <Box sx={{ flexGrow: 0 }}>
             <nav style={{ display: 'flex' }}>
-              {/* Separator and Link as plain text */}
               <span>//</span>
               <Link to="#portfolio" style={{ textDecoration: 'none', color: 'inherit', marginLeft: '1.5em' }}>
                 PORTFOLIO
               </Link>
               <span style={{ marginLeft: '1.5em', marginRight: '1.5em' }}>//</span>
               <Link 
-  to="/about" 
-  sx={{ 
-    textDecoration: 'none', color: (location.pathname === '/about') ? 'orange' : 'inherit' 
-  }}
->
+                to="/about" 
+                sx={{ 
+                  textDecoration: 'none', color: (location.pathname === '/about') ? 'orange' : 'inherit' 
+                }}
+              >
                 ABOUT
               </Link>
               <span style={{ marginLeft: '1.5em', marginRight: '1.5em' }}>//</span>

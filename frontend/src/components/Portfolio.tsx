@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Grid, Typography, Link, Modal, Card, CardContent, Button } from '@mui/material';
 import Sun from './Sun';
-import Slider from './Slider';
+import { Slider } from './Slider';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -29,7 +29,7 @@ const Portfolio = () => {
     }}>
       <Box sx={{ display: 'flex', height: '100%', flexDirection: 'column', overflow: 'hidden' }}>
         <Header />
-        <Box sx={{ flexGrow: 1, flexShrink: 1, px: 3 }}>
+        <Box sx={{ flexGrow: 1, flexShrink: 1 }}>
           <Grid item xs={12} container justifyContent="flex-end" alignItems="flex-start">
             <Typography variant="h3" sx={{ textTransform: 'uppercase' }}>
               <Link href="#" onClick={handleOpen} underline="none">LIST OF WORKS</Link>

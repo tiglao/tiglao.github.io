@@ -10,7 +10,6 @@
   import CreateNote from './components/CreateNote';
   import Notes from './components/Notes';
   import Portfolio from './components/Portfolio';
-  import PortfolioItem from './components/PortfolioItem';
   import "slick-carousel/slick/slick.css"; 
   import "slick-carousel/slick/slick-theme.css";
   
@@ -21,7 +20,6 @@
           <Router>
             <Routes>
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/portfolioitem" element={<PortfolioItem />} />
             <Route path="/notes" element={<Notes />} />
             <Route path="/createnote" element={<CreateNote />} />
               <Route path="/contact" element={<Contact />} />

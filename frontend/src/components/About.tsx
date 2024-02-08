@@ -48,7 +48,6 @@
         <Grid item>
           <Header />
         </Grid>
-        
         <Grid item container sx={{ flexGrow: 1, px: { xs: 2, sm: 3, md: 4 } }}>
           <Grid item xs={6}>
             <Grid container direction="column" justifyContent="center" sx={{ height: '65%' }}>
@@ -60,13 +59,11 @@
               </Grid>
             </Grid>
           </Grid>
-  
           <Grid item xs={4}>
             <Box sx={{ pr: 2, maxHeight: '40em', overflowY: 'auto' }}>
               <AboutBio />
             </Box>
-          </Grid>
-  
+          </Grid> 
           <Grid item xs={2} container justifyContent="flex-end" alignItems="flex-start">
             <Typography variant="h5" sx={{ textTransform: 'uppercase' }}>
               <Link href="/blog" underline="none">Blog</Link>

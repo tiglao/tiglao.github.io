@@ -1,7 +1,7 @@
-import React, { useState, Dispatch, SetStateAction } from 'react';
-import { Box, Card, Paper, CardMedia, CardContent, Typography, Grid, Button, IconButton } from '@mui/material';
-import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
+import { Box, IconButton, Paper, CardMedia, CardContent, Typography, Grid, Button } from '@mui/material';
 import { motion, useDragControls, useMotionValue } from 'framer-motion';
+import CircleIcon from '@mui/icons-material/Circle';
 import data from '../assets/portfolioData.json';
 
 const imgs = data.map( project => project.images[project.defaultImageIndex]);
@@ -18,12 +18,10 @@ export const Slider = () => {
 
     const onDragStart = () => {
         setDragging(true);
-        console.log('start')
     }
 
     const onDragEnd = () => {
         setDragging(false);
-        console.log('end')
         
         const x = dragX.get();
 
@@ -34,6 +32,22 @@ export const Slider = () => {
         }
 
     }
+
+    useEffect(() => {
+        const handleKeyNav = (event) => {
+            if (event.key === 'ArrowRight') {
+                setimgIndex((prev) => (prev + 1) % data.length);
+            } else if (event.key === 'ArrowLeft') {
+                setimgIndex((prev) => (prev - 1 + data.length) % data.length);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyNav);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyNav);
+        };
+    }, [imgs.length]);
 
     return (
         <Box sx={{
@@ -110,8 +124,26 @@ const DotNav = ({
             width: '100%',
             gap: 2,
         }}>
-            hello world.
+            {imgs.map((_, id) => {
+                return (
+                    <IconButton
+                    key={id}
+                    onClick={() => setImgIndex(id)}
+                    sx={{
+                        bgcolor: imgIndex === id ? 'primary.main' : 'grey.300',
+                        '&:hover': {
+                            bgcolor: 'primary.dark',
+                        },
+                        p: 0, 
+    
+                    }}
+                    ><CircleIcon sx={{ fontSize: '12px' }}
+                    /></IconButton>
+                );
+            })}
         </Box>
         
     );
 };
+
+

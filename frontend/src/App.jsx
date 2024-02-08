@@ -10,8 +10,6 @@
   import CreateNote from './components/CreateNote';
   import Notes from './components/Notes';
   import Portfolio from './components/Portfolio';
-  import "slick-carousel/slick/slick.css"; 
-  import "slick-carousel/slick/slick-theme.css";
   
   function App() {
     return (

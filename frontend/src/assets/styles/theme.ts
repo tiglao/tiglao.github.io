@@ -91,7 +91,8 @@ const theme = createTheme({
     },
     button: {
       textTransform: 'uppercase',
-      fontSize: '1.3em'
+      fontSize: '1.3em',
+      gap: '1em'
     },
   },
   components: {
@@ -104,14 +105,14 @@ const theme = createTheme({
           height: '50px',
           borderRadius: '8px',
           '&:hover': {
-            backgroundColor: 'rgba(0, 0, 0, 0.8)', // Lighten for hover
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
           },
           '&:active': {
-            backgroundColor: 'rgba(0, 0, 0, 0.6)', // Darken for active
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
           },
           '&:disabled': {
             backgroundColor: '#E6E6E6',
-            color: '#A6A6A6', // Greyed out
+            color: '#A6A6A6',
           },
         },
       },
